@@ -2,7 +2,7 @@
 ## 0. Pre-requisite
 0. vimba sdk
 	- [Vimba: The SDK for Allied Vision Cameras  -  Allied Vision](https://www.alliedvision.com/en/products/software.html)
-	- Download proper SDK version in above link.
+	- Download proper SDK version in the above link.
 	- `cd ~/Downloads`
 	- `tar -xvzf Vimba_v2.1.3_Linux.tgz`
 	- `cd Vimba_2_1/VimbaGigETL/`
