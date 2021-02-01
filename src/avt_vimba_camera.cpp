@@ -379,9 +379,11 @@ bool AvtVimbaCamera::resetTimestamp(void) {
 double AvtVimbaCamera::getTimestamp(void) {
   double timestamp = -1.0;
   if (runCommand("GevTimestampControlLatch")) {
-    VmbInt64_t freq, ticks;
+    VmbUint64_t freq, ticks;
     getFeatureValue("GevTimestampTickFrequency", freq);
+    ROS_INFO("freq: %lu",freq);
     getFeatureValue("GevTimestampValue", ticks);
+    ROS_INFO("ticks: %lu",ticks);
     timestamp = ((double)ticks)/((double)freq);
   }
   return timestamp;
